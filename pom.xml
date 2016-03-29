@@ -10,6 +10,7 @@
     <modules>
         <module>jsf-integration-addon</module>
         <module>jsf-integration-demo</module>
+        <module>jsf-integration-demo2</module>
     </modules>
 
 </project>

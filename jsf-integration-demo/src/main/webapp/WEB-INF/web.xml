@@ -107,8 +107,8 @@
         </init-param>
     </filter>
     <filter>
-       <filter-name>prettyFilter</filter-name>
-       <filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>
+        <filter-name>prettyFilter</filter-name>
+        <filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>
     </filter>
     <filter>
         <filter-name>rewriteFilter</filter-name>
@@ -235,6 +235,16 @@
         <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>VaadinServlet</servlet-name>
+        <servlet-class>com.vaadin.server.VaadinServlet</servlet-class>
+        <init-param>
+            <param-name>UI</param-name>
+            <param-value>com.example.webapp.vaadin.MyUI</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>faces</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
@@ -248,6 +258,16 @@
     <servlet-mapping>
         <servlet-name>CXFServlet</servlet-name>
         <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>VaadinServlet</servlet-name>
+        <url-pattern>/myui/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>VaadinServlet</servlet-name>
+        <url-pattern>/VAADIN/*</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>

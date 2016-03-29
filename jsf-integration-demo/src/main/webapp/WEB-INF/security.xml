@@ -9,9 +9,11 @@
     <http pattern="/styles/**" security="none"/>
     <http pattern="/scripts/**" security="none"/>
     <http pattern="/javax.faces.resource/**" security="none"/>
+    <http pattern="/VAADIN**" security="none"/>
 
     <http auto-config="true">
         <intercept-url pattern="/login*" access="ROLE_ANONYMOUS"/>
+        <intercept-url pattern="/myui/**" access="ROLE_ADMIN"/>
         <intercept-url pattern="/admin/**" access="ROLE_ADMIN"/>
         <intercept-url pattern="/passwordHint*" access="ROLE_ANONYMOUS,ROLE_ADMIN,ROLE_USER"/>
         <intercept-url pattern="/signup*" access="ROLE_ANONYMOUS,ROLE_ADMIN,ROLE_USER"/>
