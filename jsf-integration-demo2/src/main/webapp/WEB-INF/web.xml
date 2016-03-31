@@ -19,12 +19,6 @@
     </context-param>
 
     <!-- MyFaces specific parameters -->
-    <!-- See http://myfaces.apache.org/docindex.html for documentation 
-         about MyFaces Projects -->
-    <!-- See http://myfaces.apache.org/core21/myfaces-impl/webconfig.html 
-         for an updated list of web config parameters for MyFaces Core 
-         See http://wiki.apache.org/myfaces/Secure_Your_Application
-         for instructions about how to secure your web application -->
     <context-param>
         <param-name>org.apache.myfaces.NUMBER_OF_VIEWS_IN_SESSION</param-name>
         <param-value>20</param-value>
