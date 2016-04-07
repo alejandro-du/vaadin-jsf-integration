@@ -14,7 +14,7 @@ Add the XML namespace and use the `ui` tag to point to the URL mapped to the `Va
 
 You can optionally specify a custom widgetset and a theme:
 ```xhtml
-<vaadin:ui url="/myui" widgetset="com.example.webapp.vaadin.MyUiWidgetset" theme="mytheme"/>
+<vaadin:ui url="/myui" widgetset="com.example.MyUiWidgetset" theme="mytheme"/>
 ```
 
 ## Licence

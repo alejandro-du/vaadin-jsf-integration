@@ -9,6 +9,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 import java.util.Scanner;
 
 @FacesComponent("org.vaadin.jsf.VaadinComponent")
@@ -49,9 +50,11 @@ public class VaadinComponent extends UIComponentBase {
     }
 
     private String setVariables(String template) {
-        String url = (String) getAttributes().get("url");
-        String theme = (String) getAttributes().get("theme");
-        String widgetset = (String) getAttributes().get("widgetset");
+        Map<String, Object> attributes = getAttributes();
+        String url = (String) attributes.get("url");
+        String theme = (String) attributes.get("theme");
+        String widgetset = (String) attributes.get("widgetset");
+        String vaadindir = (String) attributes.get("vaadindir");
 
         String divId = url.substring(1).replaceAll("/", "-");
         String vaadinVersion = Version.getFullVersion();
@@ -59,10 +62,10 @@ public class VaadinComponent extends UIComponentBase {
 
         return template
                 .replace("${divId}", divId)
-                .replace("${theme}", theme == null ? VaadinServlet.DEFAULT_THEME_NAME : theme)
+                .replace("${theme}", theme != null ? theme : "valo")
                 .replace("${vaadinVersion}", vaadinVersion)
-                .replace("${widgetset}", widgetset == null ? VaadinServlet.DEFAULT_WIDGETSET : widgetset)
-                .replace("${vaadinDir}", context + "/VAADIN/")
+                .replace("${widgetset}", widgetset != null ? widgetset : VaadinServlet.DEFAULT_WIDGETSET)
+                .replace("${vaadinDir}", vaadindir != null ? vaadindir : context + "/VAADIN/")
                 .replace("${browserDetailsUrl}", context + url)
                 .replace("${serviceUrl}", context + url);
     }
