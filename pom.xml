@@ -5,7 +5,7 @@
     <groupId>org.vaadin</groupId>
     <artifactId>jsf-integration-root</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <modules>
         <module>jsf-integration-addon</module>
