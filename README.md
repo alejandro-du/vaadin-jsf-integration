@@ -1,3 +1,7 @@
+[![Published on vaadin.com/directory](https://img.shields.io/vaadin-directory/status/jsf-integration.svg)](https://img.shields.io/vaadin-directory/status/jsf-integration.svg)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/jsf-integration.svg)](https://img.shields.io/vaadin-directory/star/jsf-integration.svg)
+[![Latest version on vaadin.com/directory](https://img.shields.io/vaadin-directory/v/jsf-integration.svg)](https://img.shields.io/vaadin-directory/v/jsf-integration.svg)
+
 # JSF Integration Add-on for Vaadin 7
 JSF Integration is a Vaadin 7 add-on that allows you to render Vaadin UIs in Facelets-based JSF applications.
 
